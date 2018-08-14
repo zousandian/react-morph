@@ -119,9 +119,9 @@ class Morph extends Component {
 
   componentWillUnmount() {
     // Remove clones.
-    this.elementsCloned.forEach(node =>
-      this.props.portalElement.removeChild(node),
-    );
+    // this.elementsCloned.forEach(node =>
+    //  this.props.portalElement.removeChild(node),
+    // );
   }
 
   elementFrom = {};
@@ -232,7 +232,7 @@ class Morph extends Component {
     const originalCloneContainer = document.createElement('div');
     const originalClone = original.cloneNode(true);
 
-    originalCloneContainer.appendChild(originalClone);
+    // originalCloneContainer.appendChild(originalClone);
 
     const originalStyler = css(original);
     const cloneStyler = css(originalCloneContainer);
@@ -251,8 +251,8 @@ class Morph extends Component {
       visibility: 'visible',
     });
 
-    this.props.portalElement.appendChild(originalCloneContainer);
-    this.elementsCloned = [...this.elementsCloned, originalCloneContainer];
+    // this.props.portalElement.appendChild(originalCloneContainer);
+    // this.elementsCloned = [...this.elementsCloned, originalCloneContainer];
 
     const diffStyle = diffRect(targetRect, originalRect);
 
